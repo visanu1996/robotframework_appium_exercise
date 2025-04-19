@@ -1,0 +1,19 @@
+mob_config:
+  host: http://127.0.0.1:4723 
+  platformName: Android   
+  platformVersion: "13.0"
+  deviceName: emulator-5554  
+  automationName: UiAutomator2    
+  appPackage: com.material.components    
+  appActivity: code.ActivityMainMenu   
+  noReset: False    
+  ensureWebviewsHavePages: True    
+  nativeWebScreenshot: True    
+  newCommandTimeout: 3600    
+  connectHardwareKeyboard: True
+
+
+
+global_variable:
+  global_count: 3  # for counting in loop
+  global_wait: 10
