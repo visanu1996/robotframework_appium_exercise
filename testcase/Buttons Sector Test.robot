@@ -12,7 +12,7 @@ Close unneccesary box
     [Tags]    1st-noti
     common_keywords.Get Device Window
     common_keywords.Wait Until Text Is Visible and Click    "Allow"
-    common_keywords.Wait Until Id Visible and Click    ${common_close}
+    common_keywords.Wait Until Id Visible and Click    ${COMMON_CLOSE}
     Sleep    3
 
 Buttons check

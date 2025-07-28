@@ -7,6 +7,7 @@ Suite Teardown     Close Application
 Suite Setup    common_keywords.Open App
 
 
+
 *** Test Cases ***
 Close unneccesary box
     [Tags]    1st-noti
@@ -15,15 +16,8 @@ Close unneccesary box
     common_keywords.Wait Until Id Visible and Click    ${COMMON_CLOSE}
     Sleep    3
 
-Splash check
-    [Tags]    all-splash
-    common_keywords.Swipe Until and Click    "Splash"
-    
-    common_keywords.Swipe Until and Click    "Instagram"
-    Go Back
-    common_keywords.Swipe Until and Click    "Facebook"
-    Go Back
-    common_keywords.Swipe Until and Click    "TikTok"
-    Go Back
-    common_keywords.Swipe Until and Click    "Twitter"
-    Go Back
+Keyword Testing
+    common_keywords.Click Arrow instead of Text    "Splash"
+    common_keywords.Click Arrow instead of Text    "Cards"
+    common_keywords.Click Arrow instead of Text    "Bottom Sheet"
+    common_keywords.Click Arrow instead of Text    "Introduction"
