@@ -15,4 +15,4 @@ Resource    ${CURDIR}/resources/instructor_variables.resource
 
 
 # Variables Section
-Variables    ${CURDIR}/resources/config/android/env_config.yml
+Variables    ${CURDIR}/resources/config/android/envConfig.yml

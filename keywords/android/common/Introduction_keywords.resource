@@ -1,31 +1,31 @@
 *** Keywords ***
 Introduction Read
     [Documentation]    use this in Introduction sector, to click next and done.
-    [Arguments]    ${TO_SELECT}    ${TO_CLOSE}=${False}    
+    [Arguments]    ${toSelect}    ${toClose}=${False}    
 
-    Swipe Until and Click    ${TO_SELECT}
-    ${IS_EXIST}    Run Keyword And Return Status    AppiumLibrary.Wait Until Element Is Visible    id=${NEXT_BTN}    ${global_variable['global_wait']}
+    Swipe Until and Click    ${toSelect}
+    ${is_exist}    Run Keyword And Return Status    AppiumLibrary.Wait Until Element Is Visible    id=${next_btn}    ${global_variable['global_wait']}
     
-    IF    '${TO_CLOSE}' == '${True}'
+    IF    '${toClose}' == '${True}'
         common_keywords.Screen Capture
-        Wait Until Id Visible and Click    ${INSTUCTION_CLOSE}
+        Wait Until Id Visible and Click    ${Instruction_close}
         Sleep    3
     ELSE
         # Start of for loop
-        FOR    ${COUNTER}    IN RANGE    1    10
+        FOR    ${counter}    IN RANGE    1    10
 
             # Check if it see next button or not
-            IF    ${IS_EXIST}
+            IF    ${is_exist}
                 
                 # Check if the button is still next or done
-                ${IS_DONE}    Run Keyword And Return Status    AppiumLibrary.Wait Until Element Is Visible    android=UiSelector().text("DONE")    timeout=3
-                IF    ${IS_DONE}
+                ${is_done}    Run Keyword And Return Status    AppiumLibrary.Wait Until Element Is Visible    android=UiSelector().text("DONE")    timeout=3
+                IF    ${is_done}
                     common_keywords.Screen Capture
-                    AppiumLibrary.Click Element    id=${NEXT_BTN}
+                    AppiumLibrary.Click Element    id=${next_btn}
                     Exit For Loop
                 END
                 common_keywords.Screen Capture
-                AppiumLibrary.Click Element    id=${NEXT_BTN}
+                AppiumLibrary.Click Element    id=${next_btn}
 
             ELSE
 

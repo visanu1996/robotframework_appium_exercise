@@ -1,3 +1,3 @@
 *** Variables ***
-${COMMON_CLOSE}    com.material.components:id/bt_close
+${common_close}    com.material.components:id/bt_close
 

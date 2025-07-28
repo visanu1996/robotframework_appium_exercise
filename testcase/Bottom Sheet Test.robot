@@ -12,7 +12,7 @@ Close unneccesary box
     [Tags]    1st-noti
     common_keywords.Get Device Window
     common_keywords.Wait Until Text Is Visible and Click    "Allow"
-    common_keywords.Wait Until Id Visible and Click    ${COMMON_CLOSE}
+    common_keywords.Wait Until Id Visible and Click    ${common_close}
     Sleep    3
 
 Bottom sheet check
@@ -23,6 +23,8 @@ Bottom sheet check
     Go Back
     bottom_side_sheet_keywords.Bottom Side Sheet Check    "List"
     Go Back
+    # bottom_side_sheet_keywords.Bottom Side Sheet Check    "Map"
+    # Go Back
     bottom_side_sheet_keywords.Bottom Side Sheet Check    "Floating"
     Go Back
     bottom_side_sheet_keywords.Bottom Side Sheet Check    "Full"
